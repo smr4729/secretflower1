@@ -1,14 +1,24 @@
 <!doctype html>
 <html>
   <head>
-    <title>반포 꽃집 시크릿에 오신 것을 환영합니다.</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157292361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157292361-1');
+</script>
     <meta charset="utf-8">
+    <title>반포꽃집 시크릿에 오신 것을 환영합니다.</title>
     <style>
-    #active {
-      color:blue;text-decoration: underline;
+    #grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
     }
-    body {
-      margin: 0px;
+    #grid #article {
+      padding: 20px;
     }
     a {
       color:black;
@@ -19,27 +29,46 @@
        text-align: center;
        border-bottom: 1px solid gray;
        margin: 0px;
-       padding: 15px;
+       padding: 30px;
        display: block;
      }
-     ol {
+     #grid ol {
        border-right: 1px solid gray;
        width: 150px;
-       margin: 0px; padding: 40px;
+       margin: 0px; padding: 35px;
+     }
+     @media(max-width:1000px){
+       #grid {
+         display: block;
+       }
+       h1 {
+         font-size:40px;
+         text-align: center;
+         border-bottom:: 1px solid gray;
+         display: block;
+       }
+       #grid ol {
+         border-right: none;
+       }
      }
     </style>
   </head>
   <body>
     <h1><a href="index.html">반포 꽃집 시크릿 Banpo Flower Shop Secret</a></h1>
-  <ol>
-    <li><a href="1.html">소개</a>
-    <li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4&oquery=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4+5%EC%B8%B5&tqi=UBZwxlprvmsssO%2FOQoRssssssSl-230131" target="_blank" title="강남귀금속타운 5층">찾아오시는 길</a></li>
-    <li><a href="2.html">문의</a></li>
-    <li><a href="3.html">상품 소개</a></li>
-  </ol>
-  <h2>시크릿</h2>
-  반포꽃집 <strong><u>시크릿</u> </strong>에 오신 것을 환영합니다.
-  <br>강남 귀금속타운 5층
-  <p><img src="flower(secret).jpg" width=30%></p>
+    <div id="grid">
+      <ol>
+          <li><a href="1.html">소개</a>
+          <li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4&oquery=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4+5%EC%B8%B5&tqi=UBZwxlprvmsssO%2FOQoRssssssSl-230131" target="_blank" title="강남귀금속타운 5층">찾아오시는 길</a></li>
+          <li><a href="2.html">문의</a></li>
+          <li><a href="3.html">상품 소개</a></li>
+      </ol>
+      <div id="article">
+        <h2>반포꽃집 시크릿에 오신 것을 환영합니다.</h2>
+        <br>조화, 공간디자인, 조형디자인, 조화 도소매
+        <br>강남 귀금속타운 5층
+        <p><br><br><img src="flower(secret).jpg" width=30%>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
