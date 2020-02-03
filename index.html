@@ -14,8 +14,18 @@
     <title>반포꽃집 시크릿에 오신 것을 환영합니다.</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     <h1><a href="index.html">반포 꽃집 시크릿 Banpo Flower Shop Secret</a></h1>
+    <input type="button" value="Night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        ">
+    <input type="button" value="Day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        ">
+
     <div id="grid">
       <ol>
           <li><a href="1.html">소개</a>
