@@ -18,13 +18,17 @@
   <body>
     <h1><a href="index.html">반포 꽃집 시크릿 Banpo Flower Shop Secret</a></h1>
     <input type="button" value="Night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        ">
-    <input type="button" value="Day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        ">
+    var target=document.querySelector('body')
+    if(this.value === 'Night') {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value ='day';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'Night';
+    }
+    ">
 
     <div id="grid">
       <ol>
