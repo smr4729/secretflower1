@@ -11,32 +11,36 @@
   gtag('config', 'UA-157292361-1');
 </script>
 <script>
-  function LinksSetcolor(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-    alist[i].style.color = 'color';
-    i = i + 1;
+  var Body = {
+    setColor : function(color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor : function(color) {
+      document.querySelector('body').style.backgroundColor = color;
     }
   }
-  function BodysetColor(color) {
-    document.querySelector('body').style.color = 'color';
+  var Links = {
+    setColor : function (color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1;
+      }
+    }
   }
-  function BodySetBackgroundColor(color) {
-    document.querySelector('body').style.backgroundColor = 'color';
-  }
-  function nightandday(self){
+    function nightandday(self){
     var target = document.querySelector('body');
     if(self.value === 'Night') {
-      Body.SetBackgroundColor('black');
+      Body.setBackgroundColor('black');
       Body.setColor('white');
-      self.value ='day';
-      Links.Setcolor('powderblue');
+      self.value ='Day';
+      Links.setColor('powderblue');
     } else {
-      Body.SetBackgroundColor('white');
+      Body.setBackgroundColor('white');
       Body.setColor('black');
       self.value = 'Night';
-      Links.Setcolor('black');
+      Links.setColor('black');
     }
   }
 </script>

@@ -10,46 +10,50 @@
 
   gtag('config', 'UA-157292361-1');
 </script>
-<script>
-  function LinksSetcolor(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-    alist[i].style.color = 'color';
-    i = i + 1;
+    <script>
+    var Body = {
+      setColor : function(color){
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor : function(color) {
+        document.querySelector('body').style.backgroundColor = color;
+      }
     }
-  }
-  function BodysetColor(color) {
-    document.querySelector('body').style.color = 'color';
-  }
-  function BodySetBackgroundColor(color) {
-    document.querySelector('body').style.backgroundColor = 'color';
-  }
-  function nightandday(self){
+    var Links = {
+      setColor : function(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+    }
+    function nightDayHandler(self){
     var target = document.querySelector('body');
-    if(self.value === 'Night') {
-      Body.SetBackgroundColor('black');
-      Body.setColor('white');
-      self.value ='day';
-      Links.Setcolor('powderblue');
-    } else {
-      Body.SetBackgroundColor('white');
-      Body.setColor('black');
-      self.value = 'Night';
-      Links.Setcolor('black');
+    if(self.value === 'Night'){
+    Body.setBackgroundColor('black');
+    Body.setColor('white');
+    self.value = 'Day';
+    Links.setColor('powderblue');
+  } else {
+    Body.setBackgroundColor('white');
+    Body.setColor('black');
+    self.value = 'Night';
+    Links.setColor('blue');
     }
-  }
-</script>
+   }
+
+  </script>
     <meta charset="utf-8">
     <title>반포꽃집 시크릿에 오신 것을 환영합니다.</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1><a href="index.html">반포 꽃집 시크릿 Banpo Flower Shop Secret</a></h1>
-    <input type="button" value="Night" onclick="
-    nightandday(this);
+    <input id="night_day" type="button" value="Night" onclick="nightDayHandler(this);
     ">
-    <div id="grid">
+      <div id="grid">
         <ol>
             <li><a href="1.html" class="saw active">소개</a>
             <li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4&oquery=%EA%B0%95%EB%82%A8%EA%B7%80%EA%B8%88%EC%86%8D%ED%83%80%EC%9A%B4+5%EC%B8%B5&tqi=UBZwxlprvmsssO%2FOQoRssssssSl-230131" target="_blank" title="강남귀금속타운 5층">찾아오시는 길</a></li>
